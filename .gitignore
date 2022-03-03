@@ -1,3 +1,11 @@
+.allure
+.gradle
+schema
+build
+/*/allure-results/
+out
+.gradletasknamecache
+
 # Default ignored files
 /shelf/
 /workspace.xml
