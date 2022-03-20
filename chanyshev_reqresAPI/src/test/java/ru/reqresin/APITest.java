@@ -49,7 +49,7 @@ public class APITest {
                 given()
                 .body(loginData)
                 .when()
-                .post("/appi/login")
+                .post("/api/login")
                 .then()
                 .log().all()
                 .extract()
