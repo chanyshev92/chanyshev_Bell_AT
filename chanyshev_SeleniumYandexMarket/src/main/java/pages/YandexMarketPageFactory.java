@@ -51,6 +51,7 @@ public class YandexMarketPageFactory {
 
     }
     public void changeShowCount(String showCountString){
+
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-tid='67d9be0a']")));
 
         if (!Objects.equals(showButton.getText(), showCountString)){
@@ -86,8 +87,9 @@ public class YandexMarketPageFactory {
     public WebElement findSubCategory(String categoryName, String subcategoryName){
 
         catalogPopupButton.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@alt='"+categoryName+"']/../..")));
         chromeDriver.findElement(By.xpath("//*[@alt='"+categoryName+"']/../.."));
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='"+subcategoryName+"']")));
         return chromeDriver.findElement(By.xpath("//a[text()='"+subcategoryName+"']"));
     }
     public void findItem(String ItemString){
