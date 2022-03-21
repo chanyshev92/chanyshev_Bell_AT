@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с данными на странице page/users?page=
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "id",
@@ -42,11 +45,11 @@ public class Datum {
 
     /**
      * 
-     * @param firstName
-     * @param lastName
-     * @param id
-     * @param avatar
-     * @param email
+     * @param firstName Имя Человека
+     * @param lastName Фамилия Человека
+     * @param id Идентификатор на странице
+     * @param avatar Ссылка на аватарку человека
+     * @param email Электронная почта Человека
      */
     public Datum(Integer id, String email, String firstName, String lastName, String avatar) {
         super();

@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с объектами ошибочного входа
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
 "error"
@@ -30,7 +33,7 @@ public LoginUnSuccess() {
 
 /**
 *
-* @param error
+* @param error Сообщение об ошибке
 */
 public LoginUnSuccess(String error) {
 super();

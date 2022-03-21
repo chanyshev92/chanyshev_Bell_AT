@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с сопутствующими данными на page/users?page=
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "url",
@@ -33,8 +36,8 @@ public class Support {
 
     /**
      * 
-     * @param text
-     * @param url
+     * @param text Сопутствующее Сообщение
+     * @param url Сопуутствующий URL
      */
     public Support(String url, String text) {
         super();

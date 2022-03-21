@@ -11,13 +11,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс для страниц page/unknown
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "page",
     "per_page",
     "total",
     "total_pages",
-    "data",
+        "data",
     "support"
 })
 public class UnknownPage {
@@ -46,12 +49,12 @@ public class UnknownPage {
 
     /**
      * 
-     * @param total
-     * @param perPage
-     * @param data
-     * @param totalPages
-     * @param page
-     * @param support
+     * @param total Всего пользователей
+     * @param perPage Пользователей на странице
+     * @param data Данные пользователей
+     * @param totalPages Всего страниц
+     * @param page Номер страницы
+     * @param support Сопутствующие данные
      */
     public UnknownPage(Integer page, Integer perPage, Integer total, Integer totalPages, List<Datum> data, Support support) {
         super();

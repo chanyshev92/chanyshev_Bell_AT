@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="APITest">
+
+        <parameter name="email"  value="sadhvisingh24@gmail.com" />
+        <parameter name="password"  value="XXXXX" />
+        <parameter name="token"  value="sadhvisingh24@gmail.com" />
+        <parameter name="message"  value="XXXXX" />
+
+        <classes>
+            <class name="ru.reqresin.APITest"/>
+        </classes>
+
+    </test> <!-- Annotations -->
+</suite> <!-- Suite -->

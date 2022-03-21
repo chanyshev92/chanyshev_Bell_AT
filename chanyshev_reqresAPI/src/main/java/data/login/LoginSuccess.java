@@ -9,6 +9,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с объектами успешного входа
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
 "token"
@@ -29,7 +32,7 @@ public LoginSuccess() {
 
 /**
 *
-* @param token
+* @param token Токен авторизации конкретного пользователя
 */
 public LoginSuccess(String token) {
 super();

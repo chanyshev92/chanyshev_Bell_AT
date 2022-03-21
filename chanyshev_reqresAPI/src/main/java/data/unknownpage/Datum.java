@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с данными пользователей на странице page/unknown
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "id",
@@ -42,11 +45,11 @@ public class Datum {
 
     /**
      * 
-     * @param pantoneValue
-     * @param color
-     * @param year
-     * @param name
-     * @param id
+     * @param pantoneValue Идентификатор цвета Pantone Inc.
+     * @param color Цвет
+     * @param year Год
+     * @param name Имя
+     * @param id Идентификатор на странице
      */
     public Datum(Integer id, String name, Integer year, String color, String pantoneValue) {
         super();

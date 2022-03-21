@@ -15,9 +15,18 @@ import java.util.stream.Collectors;
 import static io.restassured.RestAssured.given;
 import static specifications.Specifications.*;
 
+/**
+ * Класс с тестами
+ * @author Rustem Chanyshev
+ * @version 1.0
+ */
 public class APITest {
-    @Test
-    public void testUsersPage(){
+
+    /**
+     *Тест на проверку разных имен файлов аватаров пользовалей
+     */
+    @Test(testName = "Тест на проверку разных имен файлов аватаров пользовалей")
+    public void testDistinctAvatarUsernames(){
         installSpec(requestSpec(),responseSpec());
         UsersPage usersPage=given()
                 .when()
@@ -41,7 +50,11 @@ public class APITest {
 
         deleteSpec();
     }
-    @Test
+
+    /**
+     * Тест на успешную аутентификацию пользователя
+     */
+    @Test(testName = "Тест на успешную аутентификацию пользователя")
     public void testSuccessfulAuth(){
         installSpec(requestSpec(),responseSpec());
         LoginData loginData =new LoginData("eve.holt@reqres.in","cityslicka");
@@ -70,7 +83,7 @@ public class APITest {
                 .log().all()
 
                 .extract().as(LoginUnSuccess.class);
-        Assert.assertEquals(login.getError(),"Missing password","Авторизация не прошла. Сообщение об ошибке не выдано");
+        Assert.assertEquals(login.getError(),"Missing password","Авторизация не прошла или Сообщение об ошибке не выдано");
 
 
         deleteSpec();

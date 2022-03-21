@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Класс с данными для отправки на api/login
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
 "email",
@@ -36,8 +39,8 @@ public LoginData(String email){
 
 /**
 *
-* @param password
-* @param email
+* @param password Пароль пользователя
+* @param email Электронная почта
 */
 public LoginData(String email, String password) {
 super();
