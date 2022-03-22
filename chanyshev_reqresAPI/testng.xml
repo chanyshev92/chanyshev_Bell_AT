@@ -3,10 +3,11 @@
 <suite name="Suite">
     <test name="APITest">
 
-        <parameter name="email"  value="sadhvisingh24@gmail.com" />
-        <parameter name="password"  value="XXXXX" />
-        <parameter name="token"  value="sadhvisingh24@gmail.com" />
-        <parameter name="message"  value="XXXXX" />
+        <parameter name="email1"  value="eve.holt@reqres.in" />
+        <parameter name="password"  value="cityslicka" />
+        <parameter name="token"  value="QpwL5tke4Pnpja7X4" />
+        <parameter name="email2"  value="peter@klaven" />
+        <parameter name="message"  value="Missing password" />
 
         <classes>
             <class name="ru.reqresin.APITest"/>

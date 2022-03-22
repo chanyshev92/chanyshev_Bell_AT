@@ -71,6 +71,10 @@ public class APITest {
         deleteSpec();
 
     }
+
+    /**
+     * Тест на провальную аутентификацию пользователя
+     */
     @Test
     public void testUnsuccessfulAuth(){
         installSpec(requestSpec(),responseBadSpec());
@@ -90,6 +94,10 @@ public class APITest {
 
 
     }
+
+    /**
+     * Тест на то, что года отсортированы
+     */
     @Test
     public void testYearsSorted(){
         installSpec(requestSpec(),responseSpec());
