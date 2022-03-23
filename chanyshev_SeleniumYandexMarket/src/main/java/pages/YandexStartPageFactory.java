@@ -1,28 +1,43 @@
 package pages;
 
 import lombok.Data;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+/**
+ *Page factory для стартовой страницы яндекса
+ */
 @Data
 public class YandexStartPageFactory {
-    protected WebDriver chromeDriver;
+    /**
+     * Экземпляр драйвера
+     */
+    private WebDriver chromeDriver;
 
+    /**
+     * Поле для поиска
+     */
     @FindBy(how = How.XPATH,xpath = "//input[@name='text']")
-    protected WebElement searchField;
+    private WebElement searchField;
+    /**
+     * Кнопка поиск
+     */
     @FindBy(how = How.XPATH,xpath = "//button[@type='submit']")
-    protected WebElement searchButton;
+    private WebElement searchButton;
+    /**
+     * Элемент Яндекс.Маркета
+     */
     @FindBy(how = How.XPATH,xpath = "//a[@data-id='market']")
-    protected WebElement marketElement;
+    private WebElement marketElement;
 
+    /**
+     * Конструктор
+     * @param chromeDriver Драйвер из WebDriverProvider
+     */
     public YandexStartPageFactory(WebDriver chromeDriver) {
         this.chromeDriver = chromeDriver;
-        this.searchField = chromeDriver.findElement(By.xpath("//input[@name='text']"));
-        this.searchButton = chromeDriver.findElement(By.xpath("//button[@type='submit']"));
-        this.marketElement = chromeDriver.findElement(By.xpath("//a[@data-id='market']"));
     }
 
     /**
